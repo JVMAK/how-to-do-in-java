@@ -8,7 +8,7 @@ Spring 5是第一个主要版本，距Spring Framework 4.0差不多四年了。�
 
 - **基准升级**
 
-  Spring 5现在最低支持JDK 8和Java EE7。几乎没有其他库提高了最低支持版本。例如，Servlet 3.1，JMS 2.0，JPA 2.1，JAX-RS 2.0，Bean Validation 1.1，Hibernate 5，Jackson 2.6，EhCache 2.10，JUnit 5和Tiles 3。
+  Spring 5现在最低支持JDK 8和Java EE7。
 
   服务器的最低支持版本也已提高。例如， Tomcat 8.5，Jetty 9.4，WildFly 10等。
 
