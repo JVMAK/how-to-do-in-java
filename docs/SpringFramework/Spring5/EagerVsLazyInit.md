@@ -15,7 +15,18 @@ Spring提供了两种简单的方法来配置bean的延迟初始化，这取决�
 AppConfig.java
 
 ```java
-`import` `org.springframework.context.annotation.Lazy;` `@Configuration``public` `class` `AppConfig {``    ` `    ``@Lazy``    ``@Bean``    ``public` `EmployeeManager employeeManager() {``        ``return` `new` `EmployeeManagerImpl();``    ``}``    ` `}`
+import org.springframework.context.annotation.Lazy;
+ 
+@Configuration
+public class AppConfig {
+     
+    @Lazy
+    @Bean
+    public EmployeeManager employeeManager() {
+        return new EmployeeManagerImpl();
+    }
+     
+}
 ```
 
 #### 1.2. 懒加载所有bean
@@ -25,7 +36,18 @@ AppConfig.java
 AppConfig.java
 
 ```java
-`import` `org.springframework.context.annotation.Lazy;` `@Lazy``@Configuration``public` `class` `AppConfig {``    ` `    ``@Bean``    ``public` `EmployeeManager employeeManager() {``        ``return` `new` `EmployeeManagerImpl();``    ``}``    ` `}`
+import org.springframework.context.annotation.Lazy;
+ 
+@Lazy
+@Configuration
+public class AppConfig {
+     
+    @Bean
+    public EmployeeManager employeeManager() {
+        return new EmployeeManagerImpl();
+    }
+     
+}
 ```
 
 #### 1.3. 注入懒加载的bean
@@ -36,7 +58,11 @@ AppConfig.java
 - @Autowired注解注入的位置
 
 ```java
-`@Lazy``@Service``public` `class` `EmployeeManagerImpl ``implements` `EmployeeManager {``  ``//``}`
+@Lazy
+@Service
+public class EmployeeManagerImpl implements EmployeeManager {
+  //
+}
 ```
 
 ```java
@@ -62,7 +88,12 @@ public class EmployeeController {
 beans.xml
 
 ```xml
-`<``beans``>` `<``bean` `id``=``"employeeManager"` `class``=``"com.howtodoinjava.spring.service.impl.EmployeeManagerImpl"``    ``lazy-init``=``"true"``/>` `<``beans``>`
+<beans>
+ 
+<bean id="employeeManager" class="com.howtodoinjava.spring.service.impl.EmployeeManagerImpl"
+    lazy-init="true"/>
+ 
+<beans>
 ```
 
 #### 2.2. 全局懒加载所有bean
@@ -72,7 +103,11 @@ beans.xml
 beans.xml
 
 ```xml
-`<``beans` `default-lazy-init``=``"true"``>` `<``bean` `id``=``"employeeManager"` `class``=``"com.howtodoinjava.spring.service.impl.EmployeeManagerImpl"` `/>` `<``beans``>`
+<beans default-lazy-init="true">
+ 
+<bean id="employeeManager" class="com.howtodoinjava.spring.service.impl.EmployeeManagerImpl" />
+ 
+<beans>
 ```
 
 ## 3. Spring 懒加载 demo
@@ -80,7 +115,23 @@ beans.xml
 让我们看一下bean的代码，我们正在尝试延迟加载。
 
 ```java
-`@Lazy``@Service``public` `class` `EmployeeManagerImpl ``implements` `EmployeeManager {` `    ``@Override``    ``public` `Employee create() {``        ``Employee emp =  ``new` `Employee();``        ``emp.setId(``1``);``        ``emp.setName(``"Lokesh"``);``        ``return` `emp;``    ``}``    ` `    ``@PostConstruct``    ``public` `void` `onInit(){``        ``System.out.println(``"EmployeeManagerImpl Bean is Created !!"``);``    ``}``}`
+@Lazy
+@Service
+public class EmployeeManagerImpl implements EmployeeManager {
+ 
+    @Override
+    public Employee create() {
+        Employee emp =  new Employee();
+        emp.setId(1);
+        emp.setName("Lokesh");
+        return emp;
+    }
+     
+    @PostConstruct
+    public void onInit(){
+        System.out.println("EmployeeManagerImpl Bean is Created !!");
+    }
+}
 ```
 
 我已经放置了`@PostConstruct`注释来检测何时创建bean。
@@ -90,13 +141,34 @@ beans.xml
 #### 3.1. 没有懒加载
 
 ```java
-`import` `org.springframework.context.ApplicationContext;``import` `org.springframework.context.annotation.AnnotationConfigApplicationContext;` `import` `com.howtodoinjava.spring.model.Employee;``import` `com.howtodoinjava.spring.service.EmployeeManager;` `public` `class` `Main ``{``    ``public` `static` `void` `main( String[] args )``    ``{``        ``ApplicationContext ctx = ``new` `AnnotationConfigApplicationContext(AppConfig.``class``);``        ` `        ``System.out.println(``"Bean Factory Initialized !!"``);``        ` `        ``EmployeeManager empManager = ctx.getBean(EmployeeManager.``class``);``        ``Employee emp = empManager.create();``        ` `        ``System.out.println(emp);``    ``}``}`
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+ 
+import com.howtodoinjava.spring.model.Employee;
+import com.howtodoinjava.spring.service.EmployeeManager;
+ 
+public class Main 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+         
+        System.out.println("Bean Factory Initialized !!");
+         
+        EmployeeManager empManager = ctx.getBean(EmployeeManager.class);
+        Employee emp = empManager.create();
+         
+        System.out.println(emp);
+    }
+}
 ```
 
 程序输出：
 
-```
-`EmployeeManagerImpl Bean is Created !!``Bean Factory Initialized !!``Employee [id=``1``, name=Lokesh]`
+```java
+EmployeeManagerImpl Bean is Created !!
+Bean Factory Initialized !!
+Employee [id=1, name=Lokesh]
 ```
 
 在这里，在bean工厂完全初始化之前，已创建并初始化了第一个bean。
@@ -104,7 +176,9 @@ beans.xml
 #### 3.2. 有懒加载
 
 ```
-`Bean Factory Initialized !!``EmployeeManagerImpl Bean is Created !!``Employee [id=``1``, name=Lokesh]`
+Bean Factory Initialized !!
+EmployeeManagerImpl Bean is Created !!
+Employee [id=1, name=Lokesh]
 ```
 
 启用bean延迟加载后，bean工厂首先进行完全初始化。稍后，当我们请求`EmployeeManager`bean时，factory然后创建了实例并返回了它。
