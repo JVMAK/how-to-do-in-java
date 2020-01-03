@@ -109,7 +109,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
         emp.setName("Lokesh");
         return emp;
     }
-}`public` `class` `EmployeeManagerImpl ``implements` `EmployeeManager {` `    ``@Override``    ``public` `Employee create() {``        ``Employee emp =  ``new` `Employee();``        ``emp.setId(``1``);``        ``emp.setName(``"Lokesh"``);``        ``return` `emp;``    ``}``}`
+}
 ```
 
 #### 2.2. 在配置类中创建@Bean注解方法
