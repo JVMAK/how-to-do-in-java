@@ -1,4 +1,4 @@
-# XML 配置 Bean
+# XML配置Bean
 
 在这个**spring bean XML配置示例中**，学习创建定义和创建spring bean以及在任何spring应用程序中填充应用程序上下文。本示例使用**xml config定义bean**。我们将使用maven管理*spring依赖关系，*并使用Eclipse构建和运行代码。
 

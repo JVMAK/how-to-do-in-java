@@ -1,4 +1,4 @@
-# Spring 5 新特性和增强功能
+# Spring5新特性和增强功能
 
 **Spring 5**是第一个主要版本，距Spring Framework 4.0差不多四年了。在这段时间内，大多数增强功能都是在[Spring boot](/docs/SpringFramework/Springboot/Introduction.md)项目中完成的。在本文中，我们将快速介绍Spring 5.0发行版中的一些令人兴奋的功能。
 

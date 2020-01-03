@@ -1,4 +1,4 @@
-# 注解配置 Bean
+# 注解配置Bean
 
 学习使用Java通过任何独立应用程序的注解来配置创建spring bean。我们将学习如何在不扫描[组件注解](https://howtodoinjava.com/spring/spring-core/how-to-use-spring-component-repository-service-and-controller-annotations/)和使用`@Bean`注解的情况下创建它。
 
