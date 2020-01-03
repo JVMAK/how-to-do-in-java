@@ -21,3 +21,4 @@
 * **[新特性](docs/SpringFramework/Spring5/NewFeatures.md)**
 * **[注解配置Bean](docs/SpringFramework/Spring5/BeanJavaConfig.md)**
 * **[XML配置Bean](docs/SpringFramework/Spring5/BeanXMLConfig.md)**
+* **[懒加载](docs/SpringFramework/Spring5/EagerVsLazyInit.md)**
