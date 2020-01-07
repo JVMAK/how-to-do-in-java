@@ -23,4 +23,9 @@
 * **[XML配置Bean](docs/SpringFramework/Spring5/BeanXMLConfig.md)**
 * **[懒加载](docs/SpringFramework/Spring5/EagerVsLazyInit.md)**
 * **[DispatcherServlet](docs/SpringFramework/Spring5/DispatcherServlet.md)**
+* **[MVC注解](docs/SpringFramework/Spring5/MVCAnnotations.md)**
+* **[MVC+Hibernate](docs/SpringFramework/Spring5/MVC+Hibernate.md)**
+* **[CORS](docs/SpringFramework/Spring5/CORS.md)**
+* **[Security Java配置](docs/SpringFramework/Spring5/SecurityJavaConfig.md)**
+* **[自定义登录表单](docs/SpringFramework/Spring5/CustomLoginForm.md)**
 
