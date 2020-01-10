@@ -8,8 +8,7 @@
 
 - [Spring bean范围](https://howtodoinjava.com/spring/spring-core/spring-bean-scopes/)
   
-可以在五个范围中创建spring容器中的bean。单例，原型，请求，会话和全局会话。
-  
+  可以在五个范围中创建spring容器中的bean。单例，原型，请求，会话和全局会话。
 - [Spring bean生命周期回调方法](https://howtodoinjava.com/spring-core/spring-bean-life-cycle/)
 
   Spring框架提供了以下4种方法来控制bean的生命周期事件：
@@ -21,52 +20,40 @@
 
 - [Spring bean自动装配](https://howtodoinjava.com/2013/05/08/spring-beans-autowiring-concepts/)
   
-在Spring框架中，遵循配置文件中的bean依赖关系是一个很好的做法，但是spring容器也能够自动装配协作bean之间的关系。这意味着可以通过检查BeanFactory的内容来自动让Spring为您的bean解决协作者（其他bean）。
-  
+  在Spring框架中，遵循配置文件中的bean依赖关系是一个很好的做法，但是spring容器也能够自动装配协作bean之间的关系。这意味着可以通过检查BeanFactory的内容来自动让Spring为您的bean解决协作者（其他bean）。
 - [通过类型自动装配Bean](https://howtodoinjava.com/spring/spring-core/spring-bean-autowire-bytype/)
   
-如果容器中恰好有一个属性类型的bean，则通过类型自动装配允许属性自动装配。如果存在多个，则将引发致命异常，这表明您不能通过类型对bean使用自动装配。
-  
+  如果容器中恰好有一个属性类型的bean，则通过类型自动装配允许属性自动装配。如果存在多个，则将引发致命异常，这表明您不能通过类型对bean使用自动装配。
 - [通过名称自动装配Bean](https://howtodoinjava.com/spring/spring-core/spring-bean-autowire-byname/)
   
-按名称自动装配允许按属性自动装配属性，以便它检查容器并查找名称与需要自动装配的属性完全相同的bean。
-  
+  按名称自动装配允许按属性自动装配属性，以便它检查容器并查找名称与需要自动装配的属性完全相同的bean。
 - [通过构造函数自动装配Bean](https://howtodoinjava.com/spring/spring-core/spring-autowiring-by-constructor/)
   
-通过构造函数自动装配与通过类型自动装配相似，但适用于构造函数参数。在启用自动装配的bean中，它将查找构造函数参数的类类型，然后按类型对所有构造函数参数进行自动装配。
-  
+  通过构造函数自动装配与通过类型自动装配相似，但适用于构造函数参数。在启用自动装配的bean中，它将查找构造函数参数的类类型，然后按类型对所有构造函数参数进行自动装配。
 - [如何使用FactoryBean创建bean](https://howtodoinjava.com/spring/spring-core/how-to-create-beans-using-spring-factorybean/)
   
-工厂bean是充当IoC容器中创建其他bean的工厂的bean。从概念上讲，工厂bean与工厂方法非常相似，但是它是特定于Spring的bean，可以在构造bean的过程中由Spring IoC容器识别，并且可以被容器用来实例化其他bean。了解如何使用Spring FactoryBean创建bean。
-  
+  工厂bean是充当IoC容器中创建其他bean的工厂的bean。从概念上讲，工厂bean与工厂方法非常相似，但是它是特定于Spring的bean，可以在构造bean的过程中由Spring IoC容器识别，并且可以被容器用来实例化其他bean。了解如何使用Spring FactoryBean创建bean。
 - [如何使用静态工厂方法创建bean](https://howtodoinjava.com/spring/spring-core/spring-create-beans-using-static-factory-method/)
   
-如果要在Spring中通过调用静态工厂方法创建bean，其目的是将对象创建过程封装在静态方法中，则可以使用factory-method属性。
-  
+  如果要在Spring中通过调用静态工厂方法创建bean，其目的是将对象创建过程封装在静态方法中，则可以使用factory-method属性。
 - [如何使用util：constant从final static字段引用中声明Bean](https://howtodoinjava.com/spring/spring-core/spring-declare-beans-from-final-static-field-references-using-util-constant/)
   
-如果您在某个Bean中具有final static字段，并且希望将这些引用用作应用程序上下文文件中的Bean注入到另一个Bean中，则可以使用<util：constant >标签。
-  
+  如果您在某个Bean中具有final static字段，并且希望将这些引用用作应用程序上下文文件中的Bean注入到另一个Bean中，则可以使用<util：constant >标签。
 - [如何将外部资源/文件加载到Spring上下文中？](https://howtodoinjava.com/spring/spring-core/how-to-load-external-resources-files-into-spring-context/)
   
-很多时候，您希望将外部资源或文件（例如，文本文件，XML文件，属性文件或图像文件）加载到Spring应用程序上下文中。Spring的资源加载器提供了统一的getResource（）方法，供您通过资源路径检索外部资源。
-  
+  很多时候，您希望将外部资源或文件（例如，文本文件，XML文件，属性文件或图像文件）加载到Spring应用程序上下文中。Spring的资源加载器提供了统一的getResource（）方法，供您通过资源路径检索外部资源。
 - [如何创建BeanPostProcessor](https://howtodoinjava.com/spring/spring-core/how-to-create-spring-bean-post-processors/)
   
-BeanPostProcessor允许在bean初始化回调方法之前和之后进行其他处理。BeanPostProcessor的主要特征是它将一个接一个地处理IoC容器中的所有Bean实例，而不仅仅是单个Bean实例。学习使用BeanPostProcessor接口类创建此类后置处理器。
-  
+  BeanPostProcessor允许在bean初始化回调方法之前和之后进行其他处理。BeanPostProcessor的主要特征是它将一个接一个地处理IoC容器中的所有Bean实例，而不仅仅是单个Bean实例。学习使用BeanPostProcessor接口类创建此类后置处理器。
 - [如何解析文本消息：ResourceBundleMessageSource示例](https://howtodoinjava.com/spring/spring-core/resolving-text-messages-in-spring-resourcebundlemessagesource-example/)
   
-为了支持国际化的应用程序，它需要能够解决不同语言环境的文本消息的功能。Spring的应用程序上下文能够通过其键解析目标语言环境的文本消息。了解如何使用ResourceBundleMessageSource类支持i10n。
-  
+  为了支持国际化的应用程序，它需要能够解决不同语言环境的文本消息的功能。Spring的应用程序上下文能够通过其键解析目标语言环境的文本消息。了解如何使用ResourceBundleMessageSource类支持i10n。
 - [如何发布和监听应用程序事件](https://howtodoinjava.com/spring/spring-core/how-to-publish-and-listen-application-events-in-spring/)
   
-有时在spring应用程序中，您可能希望增加监听特定事件的功能，以便可以按照应用程序逻辑处理这些事件。让我们学习如何在Spring应用程序中实现此发布和监听事件。
-  
+  有时在spring应用程序中，您可能希望增加监听特定事件的功能，以便可以按照应用程序逻辑处理这些事件。让我们学习如何在Spring应用程序中实现此发布和监听事件。
 - [如何使用@ Component，@ Repository，@ Service和@Controller注解？](https://howtodoinjava.com/spring/spring-core/how-to-use-spring-component-repository-service-and-controller-annotations/)
   
-在合适的地方使用`@Component`，`@Repository`，`@Service`和`@Controller注释启用自动组件扫描，Spring会自动导入beans放入容器中，这样你就不必使用XML明确定义它们。这些注解也称为构造型注解。
-  
+  在合适的地方使用`@Component`，`@Repository`，`@Service`和`@Controller注释启用自动组件扫描，Spring会自动导入beans放入容器中，这样你就不必使用XML明确定义它们。这些注解也称为构造型注解。
 - [@Required Annotation和RequiredAnnotationBeanPostProcessor示例](https://howtodoinjava.com/spring/spring-core/spring-required-annotation-and-requiredannotationbeanpostprocessor-example/)
   
   在实际的应用程序中，您不会对检查上下文文件中配置的所有Bean属性感兴趣。相反，您只想检查是否仅在某些特定的Bean中设置了特定的属性集。Spring的依赖检查功能使用“dependency-check”属性，在这种情况下将无法为您提供帮助。因此要解决此问题，可以使用`@Required`注释。
