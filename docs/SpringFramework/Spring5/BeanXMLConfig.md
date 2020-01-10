@@ -220,11 +220,7 @@ public class Operations
 
 [Spring Java配置示例](https://howtodoinjava.com/spring5/core/spring-bean-java-config/)
 
-
-
 [Spring Boot2配置示例](https://howtodoinjava.com/spring-boot2/springbootapplication-auto-configuration/)
-
-
 
 [源代码下载](https://github.com/lokeshgupta1981/spring-core/tree/master/src/main/java/com/howtodoinjava/core/demo/beans)
 

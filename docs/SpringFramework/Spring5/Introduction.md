@@ -4,7 +4,7 @@
 
 ## 1.  Spring 5的新功能
 
-Spring 5是第一个主要版本，距Spring Framework 4.0差不多四年了。在这段时间内，大多数增强功能都是在[Spring boot](/docs/SpringFramework/Springboot/Introduction.md)项目中完成的。在Spring 5中，有这些值得一提的令人兴奋的功能：
+Spring 5是第一个主要版本，距Spring Framework 4.0差不多四年了。在这段时间内，大多数增强功能都是在[Spring boot](../Springboot/Introduction.md)项目中完成的。在Spring 5中，有这些值得一提的令人兴奋的功能：
 
 - **基准升级**
 
@@ -32,7 +32,7 @@ Spring 5是第一个主要版本，距Spring Framework 4.0差不多四年了。�
 
   Spring framework 5.0对Kotlin有很好的支持。
 
-> 阅读更多: [Spring 5 新特性](docs/SpringFramework/Spring5/NewFeatures.md)
+> 阅读更多: [Spring 5 新特性](NewFeatures.md)
 
 ## 2. Spring 5示例
 
@@ -40,24 +40,24 @@ Spring 5示例和教程列表。
 
 #### 2.1. Spring 5 Core
 
-1. [Spring Bean Java 配置示例](docs/SpringFramework/Spring5/BeanJavaConfig.md)
-2. [Spring Bean XML Config 配置示例](docs/SpringFramework/Spring5/BeanXMLConfig.md)
-3. [Spring Bean 立即加载 vs 延迟加载](docs/SpringFramework/Spring5/EagerVsLazyInit.md)
-4. [Spring bean 作用域](docs/SpringFramework/Spring/BeanScopes.md)
+1. [Spring Bean Java 配置示例](BeanJavaConfig.md)
+2. [Spring Bean XML Config 配置示例](BeanXMLConfig.md)
+3. [Spring Bean 立即加载 vs 延迟加载](EagerVsLazyInit.md)
+4. [Spring bean 作用域](../Spring/BeanScopes.md)
 
 #### 2.2. Spring 5 WebMVC
 
-1. [Spring @GetMapping 和 @PostMapping 示例](docs/SpringFramework/Spring5/MVCAnnotations.md)
-2. [Spring DispatcherServlet 教程](docs/SpringFramework/Spring5/DispatchereServlet.md)
-3. [Spring 5 MVC + Hibernate 5 示例](docs/SpringFramework/Spring5/MVC+Hibernate.md)
+1. [Spring @GetMapping 和 @PostMapping 示例](MVCAnnotations.md)
+2. [Spring DispatcherServlet 教程](DispatchereServlet.md)
+3. [Spring 5 MVC + Hibernate 5 示例](Hibernate.md)
 
 #### 2.3. Spring Security 5
 
-1. [Security Java Config – @EnableWebSecurity 示例](docs/SpringFramework/Spring5/SecurityJavaConfig.md)
-2. [登录表单示例](docs/SpringFramework/Spring5/CustomLoginForm.md)
-3. [Spring CORS 配置](docs/SpringFramework/Spring5/CORS.md)
+1. [Security Java Config – @EnableWebSecurity 示例](SecurityJavaConfig.md)
+2. [登录表单示例](CustomLoginForm.md)
+3. [Spring CORS 配置](CORS.md)
 
-## 3. Spring 5 教程资源
+## 3. Spring 5 官方文档
 
 [Spring Reference](https://docs.spring.io/spring/docs/5.0.8.RELEASE/spring-framework-reference/)
 
