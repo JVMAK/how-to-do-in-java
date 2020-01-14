@@ -9,14 +9,14 @@
 ## 目录
 
 - [Spring框架](#Spring框架)
-    - [Spring 5教程](#Spring 5教程)
-    - [Spring Core教程](#Spring Core教程)
+    - [Spring 5教程](#Spring5教程)
+    - [Spring Core教程](#SpringCore教程)
 
 
 
 ## Spring框架
 
-### Spring 5教程
+### Spring5教程
 
 * **[介绍](docs/SpringFramework/Spring5/Introduction.md)**
 * **[新特性](docs/SpringFramework/Spring5/NewFeatures.md)**
@@ -32,6 +32,6 @@
 
 
 
-### Spring Core教程
+### SpringCore教程
 
 - **[介绍](docs/SpringFramework/SpringCore/Introduction.md)**
