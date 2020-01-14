@@ -9,8 +9,8 @@
 ## 目录
 
 - [Spring框架](#Spring框架)
-    - [Spring 5教程](#Spring5教程)
-    - [Spring Core教程](#SpringCore教程)
+    - [Spring5教程](#Spring5教程)
+    - [SpringCore教程](#SpringCore教程)
 
 
 
